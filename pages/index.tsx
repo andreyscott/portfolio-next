@@ -1,4 +1,4 @@
-import type { GetStaticProps } from "next";
+// import type { GetStaticProps } from "next";
 import Head from "next/head";
 // import Link from "next/link";
 // import About from "../components/About";
@@ -10,20 +10,20 @@ import Head from "next/head";
 // import Skills from "../components/Skills";
 // import WorkExperience from "../components/WorkExperience";
 // import { urlFor } from "../sanity";
-import { Experience, PageInfo, Project, Skill, Social } from "../typings";
+// import { Experience, PageInfo, Project, Skill, Social } from "../typings";
 // import { fetchExperiences } from "../utils/fetchExperiences";
 // import { fetchPageInfo } from "../utils/fetchPageInfo";
 // import { fetchProjects } from "../utils/fetchProjects";
 // import { fetchSkills } from "../utils/fetchSkills";
 // import { fetchSocials } from "../utils/fetchSocials";
 
-type Props = {
-  pageInfo: PageInfo;
-  experiences: Experience[];
-  skill: Skill[];
-  projects: Project[];
-  socials: Social[];
-};
+// type Props = {
+//   pageInfo: PageInfo;
+//   experiences: Experience[];
+//   skill: Skill[];
+//   projects: Project[];
+//   socials: Social[];
+// };
 
 const Home = () => {
   return (
