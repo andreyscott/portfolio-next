@@ -3,7 +3,8 @@ import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api'
 
 const Maps = () => {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: 'AIzaSyCtt8vCUrFi12hwFLomHI-hVt2G2iRP-HA',
+    googleMapsApiKey: 'AIzaSyDCy1HAJ1mKp11BrVCiSFXAxLrfO2k_Lvo'
+    // AIzaSyCtt8vCUrFi12hwFLomHI-hVt2G2iRP-HA',
   })
 
   if (!isLoaded) return <div className="flex space-x-2">
