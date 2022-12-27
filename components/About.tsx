@@ -1,13 +1,11 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { urlFor } from "../sanity";
-import { PageInfo } from "../typings";
+// import { urlFor } from "../sanity";
+// import { PageInfo } from "../typings";
 
-type Props = {
-  pageInfo: PageInfo;
-};
 
-export default function About({ pageInfo }: Props) {
+
+export default function About() {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -29,7 +27,8 @@ export default function About({ pageInfo }: Props) {
         }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
-        src={urlFor(pageInfo?.profilePic).url()}
+        // src={urlFor(pageInfo?.profilePic).url()}
+        src='/images/about.jpg'
         className="mb-15 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[400px] xl:h-[500px]"
       />
       <div className="space-y-10 px-0 md:px-10">
@@ -38,9 +37,16 @@ export default function About({ pageInfo }: Props) {
           <span className="underline decoration-[#4ff924]/50">little</span>{" "}
           background
         </h4>
-        <p className="text-sm text-base px-10 md:px-0">
-          {pageInfo?.backgroundInformation}
+        <div className="text-gray-300 w-96 md:w-[520px] text-lg">
+        <p className="text-sm md:text-base px-10 md:px-0">
+          I am a self-taught developer with a passion for creating beautiful
+          websites and applications. I have been working with web development for
+          over a year now and I am always looking for new opportunities to
+          improve my skills and learn new things.
+
+
         </p>
+        </div>
       </div>
     </motion.div>
   );

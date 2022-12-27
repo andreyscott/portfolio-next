@@ -2,14 +2,23 @@ import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Social } from "../typings";
 import SoundBar from "./Soundbar/";
+import { type } from "os";
+
 
 type Props = {
-  socials: Social[];
+  dataSocials: {
+    _id: string;
+    url: string;
+  }[];
 };
 
-export default function Header({ socials }: Props) {
+
+
+
+
+
+export default function Header({ dataSocials }: Props) {
   return (
     <header className="sticky top-0 px-5 md:px-7 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
       <motion.div
@@ -19,7 +28,7 @@ export default function Header({ socials }: Props) {
         className="flex flex-row items-center"
       >
         {/* Social Icons */}
-        {socials?.map((social) => (
+        {dataSocials?.map((social) => (
           <SocialIcon
             key={social._id}
             url={social.url}

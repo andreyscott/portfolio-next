@@ -28,3 +28,17 @@ const Home = ({ pageInfo, experiences, skill, projects, socials }: Props) => {
         <ContactMe pageInfo={pageInfo} />
       </section>
 }
+
+
+
+{project?.technologies?.map((technology) => (
+  // eslint-disable-next-line react/jsx-no-undef
+  <Image
+    className="h-10 w-10"
+    key={technology._id}
+    src={technology.image}
+    alt='some text here'
+    width={44}
+    height={44}
+  />
+))}
