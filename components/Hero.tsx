@@ -4,15 +4,12 @@ import Image from "next/image";
 import React, { useState,useEffect } from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { urlFor } from "../sanity";
-import { PageInfo } from "../typings";
+// import { PageInfo } from "../typings";
 import BackgroundCircles from "./BackgroundCircles";
 import AnimatedLetters from './AnimatedLetters'
 
-type Props = {
-  pageInfo: PageInfo;
-};
 
-export default function Hero({ pageInfo }: Props) {
+export default function Hero() {
 
   const [letterClass, setLetterClass] = useState('text-animate')
 
@@ -37,7 +34,7 @@ export default function Hero({ pageInfo }: Props) {
 
   const [text, count] = useTypewriter({
     words: [
-      `Hi, The Name's ${pageInfo?.name}`,
+      `Hi, The Name's Andrew`,
       "Guy-who-codes-in.tsx",
       "SomeOneWho-is-const-ant.jsx",
       "<LovesToRead />",
@@ -50,13 +47,14 @@ export default function Hero({ pageInfo }: Props) {
       <BackgroundCircles />
       <Image
         className="relative rounded-full mx-auto object-cover h-40 w-40"
-        src={urlFor(pageInfo?.heroImage).url()}
+        // src={urlFor(pageInfo?.heroImage).url()}
+        src='/images/andrey.jpg'
         alt="Profile Image of Andrew"
         width={160}
         height={160}
         loading="eager"
         placeholder="blur"
-        blurDataURL={urlFor(pageInfo?.heroImage).blur(20).url()}
+        blurDataURL='/images/andrey.jpg'
 
       />
       <div className="z-20">

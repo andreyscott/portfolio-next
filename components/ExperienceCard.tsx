@@ -1,13 +1,24 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Experience } from "../typings";
-import { urlFor } from "../sanity";
+import Image from "next/image";
+import { type } from "os";
 
-type Props = {
-  experience: Experience;
-};
 
-export default function ExperienceCard({ experience }: Props) {
+
+type Experience = {
+  id: number;
+  jobTitle: string;
+  company: string;
+  companyImage: any;
+  dateStarted: string;
+  dateEnded: string;
+  isCurrentlyWorkingHere: boolean;
+  technologies: any[];
+  points: string[];
+};   
+
+export default function ExperienceCard ({ experience }: { experience: Experience }) {
+
   return (
     <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[96vw] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#4ff924]/80 overflow-x-hidden">
       <motion.img
@@ -16,7 +27,7 @@ export default function ExperienceCard({ experience }: Props) {
         transition={{ duration: 1 }}
         viewport={{ once: true }}
         className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
-        src={urlFor(experience?.companyImage).url()}
+        src={experience?.companyImage}
         alt=""
       />
       <div className="px-0 md:px-10">
@@ -25,10 +36,13 @@ export default function ExperienceCard({ experience }: Props) {
         <div className="flex space-x-2 my-2">
           {/* tech used */}
           {experience?.technologies?.map((technology) => (
-            <img
+            <Image
               key={technology._id}
               className="h-10 w-10 rounded-full"
-              src={urlFor(technology.image).url()}
+              src={technology.image}
+              alt=""
+              width={44}
+              height={44}
             />
           ))}
         </div>

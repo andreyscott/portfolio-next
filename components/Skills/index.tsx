@@ -25,7 +25,7 @@ const Skiller = () => {
           animate={{ x: 0, opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
 
-        className="text-zoneflex flex-col items-center justify-center md:w-1/2 px-3">
+        className="text-zone flex flex-col items-center justify-center md:w-1/2 px-3">
           <h1 className='text-4xl md:text-6xl font-extrabold pb-3 tracking-widest'>
             <AnimatedLetters
               letterClass={letterClass}
@@ -35,10 +35,7 @@ const Skiller = () => {
             <br />
           </h1>
           <p 
-          className='px-2 leading-8 tracking-wide text-xl font-mono'
-
-
-          >
+          className='px-2 leading-8 tracking-wide text-xl font-mono' >
             I love to keep a variety of tools in my tech stack. I also make sure
             to be pro at using one tool before moving on to the next. I keep
             myself up to date with the latest technologies around.
